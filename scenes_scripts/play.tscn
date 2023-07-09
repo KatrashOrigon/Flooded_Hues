@@ -1,0 +1,91 @@
+[gd_scene load_steps=10 format=3 uid="uid://cuhng2opj4rd3"]
+
+[ext_resource type="Script" path="res://scenes_scripts/play.gd" id="1_0iguj"]
+[ext_resource type="Texture2D" uid="uid://bf3n83myw556l" path="res://colors/blue.png" id="2_dpuws"]
+[ext_resource type="Texture2D" uid="uid://cqcvs0h1qs8bv" path="res://colors/green.png" id="3_o4par"]
+[ext_resource type="Texture2D" uid="uid://dw0iynf2fl1ey" path="res://colors/orange.png" id="4_103mc"]
+[ext_resource type="Texture2D" uid="uid://lpbsp5qs7usq" path="res://colors/pink.png" id="5_hspto"]
+[ext_resource type="Texture2D" uid="uid://b4xtlgwswoix0" path="res://colors/red.png" id="6_55v3r"]
+[ext_resource type="Texture2D" uid="uid://d0yffnoagbd1o" path="res://colors/yellow.png" id="7_6ojv3"]
+[ext_resource type="Texture2D" uid="uid://be2g58k6gsdip" path="res://icons/restart.png" id="8_t28ha"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6dpsq"]
+font_size = 40
+
+[node name="play" type="Node2D"]
+script = ExtResource("1_0iguj")
+metadata/_edit_vertical_guides_ = [450.0, 510.0]
+
+[node name="btnBlue" type="TextureButton" parent="."]
+offset_left = 570.0
+offset_top = 150.0
+offset_right = 630.0
+offset_bottom = 210.0
+texture_normal = ExtResource("2_dpuws")
+
+[node name="btnGreen" type="TextureButton" parent="."]
+offset_left = 690.0
+offset_top = 150.0
+offset_right = 750.0
+offset_bottom = 210.0
+texture_normal = ExtResource("3_o4par")
+
+[node name="btnOrange" type="TextureButton" parent="."]
+offset_left = 810.0
+offset_top = 150.0
+offset_right = 870.0
+offset_bottom = 210.0
+texture_normal = ExtResource("4_103mc")
+
+[node name="btnPink" type="TextureButton" parent="."]
+offset_left = 570.0
+offset_top = 270.0
+offset_right = 630.0
+offset_bottom = 330.0
+texture_normal = ExtResource("5_hspto")
+
+[node name="btnRed" type="TextureButton" parent="."]
+offset_left = 690.0
+offset_top = 270.0
+offset_right = 750.0
+offset_bottom = 330.0
+texture_normal = ExtResource("6_55v3r")
+
+[node name="btnYellow" type="TextureButton" parent="."]
+offset_left = 810.0
+offset_top = 270.0
+offset_right = 870.0
+offset_bottom = 330.0
+texture_normal = ExtResource("7_6ojv3")
+
+[node name="btnRestart" type="Button" parent="."]
+offset_left = 630.0
+offset_top = 390.0
+offset_right = 810.0
+offset_bottom = 458.0
+icon = ExtResource("8_t28ha")
+icon_alignment = 1
+
+[node name="txRectBoard" type="TextureRect" parent="."]
+offset_left = 60.0
+offset_top = 60.0
+offset_right = 450.0
+offset_bottom = 420.0
+
+[node name="lblScore" type="Label" parent="."]
+offset_left = 570.0
+offset_top = 60.0
+offset_right = 870.0
+offset_bottom = 120.0
+text = "0/25"
+label_settings = SubResource("LabelSettings_6dpsq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="btnBlue" to="." method="_on_btn_blue_pressed"]
+[connection signal="pressed" from="btnGreen" to="." method="_on_btn_green_pressed"]
+[connection signal="pressed" from="btnOrange" to="." method="_on_btn_orange_pressed"]
+[connection signal="pressed" from="btnPink" to="." method="_on_btn_pink_pressed"]
+[connection signal="pressed" from="btnRed" to="." method="_on_btn_red_pressed"]
+[connection signal="pressed" from="btnYellow" to="." method="_on_btn_yellow_pressed"]
+[connection signal="pressed" from="btnRestart" to="." method="_on_btn_back_pressed"]
